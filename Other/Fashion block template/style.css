@@ -6,6 +6,7 @@
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .menus {
@@ -27,16 +28,28 @@ a {
     display: inline-block;
 }
 
+.home-logo {
+    width: 128px;
+    height: 32px;
+    transition: 0.3s;
+}
+
+.home-logo:hover {
+    transform: scale(1.1);
+}
+
 .menu-item {
     color: #000;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
     font-family: 'PT sans';
+    transition: 0.3s;
 }
 
 .menu-item:hover {
     text-decoration: underline;
+    transform: translateY(-4px);
 }
 
 .active {
@@ -94,8 +107,8 @@ a {
 
 .banner-text {
     position: absolute;
-    left: 19%;
-    bottom: 8%;
+    left: 375px;
+    bottom: 59px;
     color: #fff;
 }
 
@@ -199,7 +212,7 @@ a {
 }
 
 .l1-button:hover {
-    background-color: #e7e6e6;
+    transform: scale(1.06);
 }
 
 .l7-button {
@@ -217,7 +230,7 @@ a {
 }
 
 .l7-button:hover {
-    background-color: #e7e6e6;
+    transform: scale(1.06);
 }
 
 .l7-text {
@@ -338,7 +351,7 @@ a {
 }
 
 .r1-button:hover {
-    background-color: #e7e6e6;
+    transform: scale(1.06);
 }
 
 .r1-author-name {
@@ -412,7 +425,7 @@ a {
 }
 
 .r2-button:hover {
-    background-color: #e7e6e6;
+    transform: scale(1.06);
 }
 
 .r2-title {
@@ -577,10 +590,12 @@ a {
     font-size: 14px;
     line-height: 18px;
     color: #666666;
+    transition: 0.3s;
     
 }
 .d-menus a:hover {
     text-decoration: underline;
+    transform: translateY(-4px);
 }
 
 .share {
