@@ -5,6 +5,18 @@ console.log(bruh)
 console.log(mahbruh)
 
 // || && ! typeof /n = xuong dong, /t = vao tab
+$(tên biến)
+
+string
+tên biến.length độ dài của biến string
+.concat() tương tự với +
+.to
+.trim; .trimStart; .trimEnd loại bỏ space ở đầu và cuối
+.substring() chọn ra đoạn ký tự
+.include() kiểm tra xem biến có ký tự trong ngoặc không
+
+typeof tên biến    check loại giá trị của biến
+
 
 if ("2 > 1") {
     console.log("sai roi")
