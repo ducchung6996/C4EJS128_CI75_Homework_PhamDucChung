@@ -53,3 +53,34 @@ switch (key) {
     default:
         break;
 }
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
+let yourInput = Number(prompt("Input:"))
+
+let i = 0;
+// while (i < yourInput) {
+//     console.log(`vi tri thu: ${i + 1}`)
+//     i++;
+// }
+
+do {
+    console.log(`vi tri thu: ${i + 1}`)
+    i++;
+} while (i < yourInput)
+
+
+let duc = "duc ml";
+
+
+
+let menu = ["dak", "buh", "lol", "lmao", duc, "skrrrr"];
+
+menu[7] = "vailoz";
+
+for (let i = 0; i < menu.length; i++) {
+    console.log(menu[i])  
+}
