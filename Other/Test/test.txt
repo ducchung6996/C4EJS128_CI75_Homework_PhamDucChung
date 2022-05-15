@@ -90,3 +90,12 @@ let tenbien = [...tenbienkhac]
 
 deep coppy
 tenbien = JSON.parse(JSON.stringify(tenbienkhac))
+
+// while (true) {
+//     lmao();
+//     let repeat = parseInt(prompt("Do you wanna try again ?\n1. Yep\n2. Nah"));
+//     if (repeat != 1) {
+//         alert("Later bitch")
+//         break;
+//     }
+// }
