@@ -84,3 +84,9 @@ menu[7] = "vailoz";
 for (let i = 0; i < menu.length; i++) {
     console.log(menu[i])  
 }
+
+shadow copy
+let tenbien = [...tenbienkhac]
+
+deep coppy
+tenbien = JSON.parse(JSON.stringify(tenbienkhac))
