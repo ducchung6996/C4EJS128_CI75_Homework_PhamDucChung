@@ -1,0 +1,101 @@
+let bruh = 1 !== 1
+let mahbruh = 1 == "1"
+
+console.log(bruh)
+console.log(mahbruh)
+
+// || && ! typeof /n = xuong dong, /t = vao tab
+$(tên biến)
+
+string
+tên biến.length độ dài của biến string
+.concat() tương tự với +
+.to
+.trim; .trimStart; .trimEnd loại bỏ space ở đầu và cuối
+.substring() chọn ra đoạn ký tự
+.include() kiểm tra xem biến có ký tự trong ngoặc không
+
+typeof tên biến    check loại giá trị của biến
+
+
+if ("2 > 1") {
+    console.log("sai roi")
+}
+
+let gogo = 0
+
+if (gogo) {
+    console.log("sua cai loz")
+} else {
+    console.log("lmao")
+}
+
+let A = 20
+let B = 30
+
+if (A > B) {
+    console.log("A > B")
+} else if (A === B) {
+    console.log("A = B cung kieu giu lieu")
+} else {
+    console.log("A = B")
+}
+
+let C = A > B ? "more" : (A == B ? "equal" : "less")
+
+console.log(C)
+
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
+let yourInput = Number(prompt("Input:"))
+
+let i = 0;
+// while (i < yourInput) {
+//     console.log(`vi tri thu: ${i + 1}`)
+//     i++;
+// }
+
+do {
+    console.log(`vi tri thu: ${i + 1}`)
+    i++;
+} while (i < yourInput)
+
+
+let duc = "duc ml";
+
+
+
+let menu = ["dak", "buh", "lol", "lmao", duc, "skrrrr"];
+
+menu[7] = "vailoz";
+
+for (let i = 0; i < menu.length; i++) {
+    console.log(menu[i])  
+}
+
+shadow copy
+let tenbien = [...tenbienkhac]
+
+deep coppy
+tenbien = JSON.parse(JSON.stringify(tenbienkhac))
+
+// while (true) {
+//     lmao();
+//     let repeat = parseInt(prompt("Do you wanna try again ?\n1. Yep\n2. Nah"));
+//     if (repeat != 1) {
+//         alert("Later bitch")
+//         break;
+//     }
+// }
