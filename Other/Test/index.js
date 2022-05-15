@@ -43,6 +43,7 @@ let lmao = () => {
 
 for (;;) {
     lmao();
+    
     let repeat = parseInt(prompt("Do you wanna try again ?\n1. Yep\n2. Nah"));
     if (repeat != 1) {
         alert("Later bitch")
