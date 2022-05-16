@@ -8,11 +8,11 @@ let lmao = () => {
     let muhneyForFood = parseInt(prompt("Muhney for food ?"));
     let otherMuhney = parseInt(prompt("Muhney you need to spend for other thing ?"))
 
-    function totalMuhneySpendCounter(a, b, c) {
+    let totalMuhneySpendCounter = (a, b, c) => {
         return a + b + c;
     }
 
-    function muhneyLeft(a, b, c, d) {
+    let muhneyLeft = (a, b, c, d) => {
         return a - (b + c + d)
     }
 
@@ -45,7 +45,7 @@ for (;;) {
     lmao();
     let repeat = parseInt(prompt("Do you wanna try again ?\n1. Yep\n2. Nah"));
     if (repeat != 1) {
-        alert("Later bitch");
+        alert("Bye na");
         break;
     }
 }
