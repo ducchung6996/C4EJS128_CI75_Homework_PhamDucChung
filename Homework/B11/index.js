@@ -31,7 +31,8 @@ for (let number of math) {
             subScreen.innerText += (mainScreen.innerText + " " + this.value);
             mainScreen.innerText = "";
         } else {
-            return
+            subScreen.innerText = subScreen.innerText.slice(0, -1);
+            subScreen.innerText += (mainScreen.innerText + " " + this.value);
         }
     });
 }
@@ -52,3 +53,14 @@ function undo() {
     let nums = mainScreen.innerText;
     mainScreen.innerText = nums.slice(0, -1);
 }
+// setTimeout(() => {
+//     subScreen.innerHTML = `1234<span class="ani">4</span>`;
+
+// }, 2000);
+
+/**
+ * thêm 1 biến để lưu giá trị
+ * thêm style cho các số mới dc nhập
+ * replace các số trong screen bằng số của biến mới
+ * 
+ */
