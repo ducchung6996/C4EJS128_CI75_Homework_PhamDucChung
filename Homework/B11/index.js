@@ -1,40 +1,54 @@
 const buttons = document.getElementsByClassName("numb");
 const result = document.getElementById("result");
-const screen = document.getElementById("screen");
+const subScreen = document.getElementById("sub-screen");
+const mainScreen = document.getElementById("main-screen");
 const math = document.getElementsByClassName("math");
-let temp = "";
+const dot = document.getElementsByClassName("dot")
+
+function equal() {
+    if (subScreen.innerText == "" || mainScreen.innerText == "") {
+        return
+    }
+    let result = eval(subScreen.innerText + mainScreen.innerText);
+    mainScreen.innerText = parseFloat((result).toPrecision(12));
+    subScreen.innerText = "";
+}
 
 for (let number of buttons) {
     number.addEventListener('click', function () {
-        screen.innerText = temp;
-        screen.innerText += this.value;
-        temp += this.value;
-        console.log(temp);
+        mainScreen.innerText += this.value;
     });
 }
 
 for (let number of math) {
     number.addEventListener('click', function () {
-        screen.innerText += this.value;
-        temp += this.value;
-        console.log(temp);
+        if (subScreen.innerText != "" && mainScreen.innerText != "") {
+            let result = eval(subScreen.innerText + mainScreen.innerText);
+            subScreen.innerText = (parseFloat((result).toPrecision(12)) + " " + this.value);
+            mainScreen.innerText = "";
+        }
+        if (subScreen.innerText == "") {
+            subScreen.innerText += (mainScreen.innerText + " " + this.value);
+            mainScreen.innerText = "";
+        } else {
+            return
+        }
     });
 }
 
-function equal() {
-    let result = eval(temp);
-    screen.innerText = parseFloat((result).toPrecision(12));
-    temp = "";
+function dots() {
+    if (mainScreen.innerText.includes('.')) {
+        return
+    }
+    mainScreen.innerText += ".";
 }
 
 function erase() {
-    screen.innerText = "";
-    temp = "";
+    mainScreen.innerText = "";
+    subScreen.innerText = "";
 }
 
-function undo () {
-    let nums = screen.innerText;
-    screen.innerText = nums.slice(0, -1);
-    let temp1 = temp;
-    temp = temp1.slice(0, -1);
+function undo() {
+    let nums = mainScreen.innerText;
+    mainScreen.innerText = nums.slice(0, -1);
 }

@@ -10,7 +10,10 @@
 </head>
 <body>
     <section>
-        <div id="screen"></div>
+        <div class="screen">
+            <div id="sub-screen"></div>
+            <div id="main-screen"></div>
+        </div>
         <div class="cal-box">
             <button type="button" onclick="erase()">C</button>
             <button class="numb" type="button" value="%">%</button>
@@ -30,7 +33,7 @@
             <button class="math" type="button" value="+">+</button>
             <button class="numb" type="button" value="00">00</button>
             <button class="numb" type="button" value="0">0</button>
-            <button class="numb" type="button" value=".">.</button>
+            <button class="dot" type="button" onclick="dots()" value=".">.</button>
             <button id="result" class="equal" type="button" onclick="equal()">=</button>
         </div>
     </section>

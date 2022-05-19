@@ -16,15 +16,29 @@ section {
     align-items: center;
 }
 
-#screen {
+.screen {
     width: 400px;
-    height: 70px;
+    min-height: 100px;
     padding: 10px 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: #fff;
-    overflow: hidden;
+}
+
+.screen div {
+    width: 100%;
+    height: fit-content;
+    min-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: end;
+}
+
+#sub-screen {
+    font-size: 25px;
+    color: rgb(179, 179, 179);
 }
 
 .cal-box {
