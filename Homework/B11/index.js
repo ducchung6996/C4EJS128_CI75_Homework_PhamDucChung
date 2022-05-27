@@ -53,14 +53,3 @@ function undo() {
     let nums = mainScreen.innerText;
     mainScreen.innerText = nums.slice(0, -1);
 }
-// setTimeout(() => {
-//     subScreen.innerHTML = `1234<span class="ani">4</span>`;
-
-// }, 2000);
-
-/**
- * thêm 1 biến để lưu giá trị
- * thêm style cho các số mới dc nhập
- * replace các số trong screen bằng số của biến mới
- * 
- */
