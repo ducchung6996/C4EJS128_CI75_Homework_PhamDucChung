@@ -222,17 +222,17 @@ section {
 
 @keyframes rotateZ {
     0% {
-      opacity: 0;
-      transform: translateZ(290px);
+        opacity: 0;
+        transform: translateZ(290px);
     }
-    
+
     80% {
-      transform: translateZ(10px);
+        transform: translateZ(10px);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0);
     }
 }
 
@@ -247,17 +247,17 @@ section {
 
 @keyframes scaleZ {
     0% {
-      opacity: 0;
-      transform: scale(0);
+        opacity: 0;
+        transform: scale(0);
     }
-    
+
     80% {
-      transform: scale(1.07);
+        transform: scale(1.07);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -272,16 +272,16 @@ section {
 
 @keyframes translateX {
     0% {
-      opacity: 0;
-      transform: translateX(60px);
+        opacity: 0;
+        transform: translateX(60px);
     }
-    
+
     80% {
-      transform: translateX(-5px);
+        transform: translateX(-5px);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: translateX(0px);
+        opacity: 1;
+        transform: translateX(0px);
     }
-  }
+}
