@@ -6,18 +6,6 @@
     font-size: 30px;
 }
   
-.ani{
-    width: 100px;
-  height: 100px;
-  background: red;
-  position: relative;
-    animation: mymove 10s infinite;
-}
-@keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
-}
-
 section {
     display: flex;
     flex-direction: column;

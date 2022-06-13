@@ -28,9 +28,10 @@ section {
     transition: 0.3s;
     perspective: 1000px;
     z-index: 1;
-        &:hover {
-            background-color: #2bb363;
-        }
+
+    &:hover {
+        background-color: #2bb363;
+    }
 }
 
 .sub-menu-item {
@@ -40,20 +41,22 @@ section {
     align-items: center;
     justify-content: center;
     background-color: #1abc9c;
-    visibility: hidden;
-    opacity: 0;
-    // transition: 0.5s ease;
-    transform: translateY(-100px);
-        &:hover {
-            background-color: #17806b;
-        }
+
+    // visibility: hidden;
+    // opacity: 0;
+    // // transition: 0.5s ease;
+    // transform: translateY(-100px);
+    &:hover {
+        background-color: #17806b;
+    }
+
     // transition-delay: 0.5s;
 }
 
 .sub-menu {
     position: absolute;
     // visibility: hidden;
-    // opacity: 0;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,19 +68,20 @@ section {
     // transform: translateY(-80px);
     z-index: -1;
     // transition: 0.3s linear 0.1s;
-    @for $i from 1 through 5 {
-        .sub-menu-item:nth-child(#{$i}) {
-            transition: 0.3s ease;
-            transition-delay: 0 + (0.2s*$i);
-        }
-    }
+    // @for $i from 1 through 5 {
+    //     .sub-menu-item:nth-child(#{$i}) {
+    //         transition: 0.3s ease;
+    //         transition-delay: 0 + (0.2s*$i);
+    //     }
+    // }
+    transform: rotateX(-90deg);
+    transition: 0.5s ease-in-out;
+    transform-origin: top center;
+    // animation: growDown 300ms ease-in-out forwards;
 }
 
-.nav-menu:hover .sub-menu-item {
-    visibility: visible;
+.nav-menu:hover .sub-menu {
+    // visibility: visible;
     opacity: 1;
-    transform: translateY(0);
+    transform: rotateX(0);
 }
-
-
-
