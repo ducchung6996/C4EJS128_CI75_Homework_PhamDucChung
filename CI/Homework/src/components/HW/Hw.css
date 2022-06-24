@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.traffic-lights>div>div {
+.light {
     width: 30px;
     height: 30px;
     border-radius: 50%;

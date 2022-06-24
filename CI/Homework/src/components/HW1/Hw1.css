@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+}
+
+.container>div {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: solid 1px #000;
+    margin: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
