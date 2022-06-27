@@ -34,7 +34,7 @@ function Hw2() {
                   <input type="checkbox"/>
                   <div>{item}</div>
                 </div>
-                <button value={item} onClick={removeToDo}>X</button>
+                <button value={item} onClick={removeToDo}>Delete</button>
               </div>
           ))}
         </div>

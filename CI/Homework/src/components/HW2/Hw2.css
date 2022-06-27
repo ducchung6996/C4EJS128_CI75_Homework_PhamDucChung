@@ -75,8 +75,7 @@ form>button:hover {
 }
 
 .list-items>button {
-    width: 20px;
-    height: 20px;
+    padding: 6px 10px;
     font-weight: bold;
     background-color: #e74c3c;
     cursor: pointer;
