@@ -1,15 +1,27 @@
 import React from 'react'
+import { useState } from 'react'
 import './Hw1.css'
 
 function Hw1() {
-  const divNum = [1, 2, 3, 4, 5, 6]
+  const [arr, setArr] = useState("");
+  const [text, setText] = useState("");
+  function changeArr(event) {
+    setArr(event.target.value);
+  }
+  function changeText(event) {
+    event.preventDefault();
+    setText(arr);
+    setArr("");
+  }
   return (
-    <div className='container'>
-      {
-        divNum.map((num, index) => (
-          <div key={index} className={num % 2 === 0 ? "circle" : "square"}></div>
-      ))}
-    </div>
+    <>
+      <h1>HW1</h1>
+      <form onSubmit={changeText} className='hw1'>
+        <input onChange={changeArr} value={arr} type="text" placeholder='Input...'/>
+        <button type='submit'>OK</button>
+      </form>
+      <div className='screen'>{text}</div>
+    </>
   )
 }
 

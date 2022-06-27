@@ -1,23 +1,44 @@
-import React from 'react'
-import { useState } from 'react'
-import './Hw2.css'
+import React from 'react';
+import { useState } from 'react';
+import './Hw2.css';
 
 function Hw2() {
-  const arr = [0, 1, 2, 3, 4, 5, 6]
-  const [num, setNum] = useState(0)
-  const changeNum = () => {
-    setNum((prev) => {return prev === 6 ? 0 : prev +1})
+  // let array = ["buh", "lol", "lmao"]
+  const [todo, setToDo] = useState("");
+  const [num, setNum] = useState([]);
+  function addToDo(event) {
+    event.preventDefault();
+    if (num.includes(todo)) {
+      alert("Không thể trùng lặp")
+      return;
+    }
+    setNum([...num, todo])
+    setToDo("")
+  }
+
+  function removeToDo(event) {
+    setNum(num.filter(e => e !== event.target.value))
   }
   return (
-    <div className='hw2'>
-      <button onClick={changeNum}>Next</button>
-      <div>
-        {
-          arr.map((item, index) => (
-            <div key={index} className={`box ${index === num && "active"}`}></div>
-        ))}
-      </div>
-    </div>
+    <>
+      <h1>Todo</h1>
+      <form onSubmit={addToDo} className='hw2'>
+        <input type="text" onChange={(e) => setToDo(e.target.value)} value={todo} placeholder='Add todo'/>
+        <button type='submit'>Add</button>
+      </form>
+      <div className='list'>
+          {
+            num.map((item, index) => (
+              <div key={index} className='list-items'>
+                <div>
+                  <input type="checkbox"/>
+                  <div>{item}</div>
+                </div>
+                <button value={item} onClick={removeToDo}>X</button>
+              </div>
+          ))}
+        </div>
+    </>
   )
 }
 
