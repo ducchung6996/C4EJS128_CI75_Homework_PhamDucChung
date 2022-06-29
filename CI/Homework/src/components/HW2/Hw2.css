@@ -59,13 +59,14 @@ form>button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 30%;
     padding: 16px;
     background-color: #2c3e50;
     color: #fff;
     animation: appear;
     transform-origin: top center;
     animation-duration: 0.5s;
+    transition: 0.5s;
 }
 
 .list-items>div {
@@ -74,14 +75,33 @@ form>button:hover {
     gap: 10px;
 }
 
+.finish {
+    background-color: #535b5c;
+}
+
+.finish .todo {
+    text-decoration: line-through;
+}
+
 .list-items>button {
     padding: 6px 10px;
     font-weight: bold;
     background-color: #e74c3c;
     cursor: pointer;
     transition: 0.4s;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.list-items input {
+    width: 25px;
+    height: 25px;
 }
 
 .list-items>button:hover {
     background-color: #e9938a;
+}
+
+.todo {
+    overflow: auto;
 }
