@@ -44,7 +44,7 @@ function Hw2() {
   }
 
   function todoStatus(event) {
-    setNum(num.map((item) => item.id == event.target.value ? {...item, status: !item.status} : item))
+    setNum(num.map((item) => item.id === event.target.value ? {...item, status: !item.status} : item))
     if (event.target.checked) {
       toast.success('Finished', {autoClose: 2000})
     } else {

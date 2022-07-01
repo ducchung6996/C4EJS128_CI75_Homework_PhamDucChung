@@ -1,22 +1,22 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { GrLinkTop } from 'react-icons/gr'
+import './Hw.css'
 
 function Hw() {
-  const traffcLightsClassName = ["red", "yellow", "green"]
-  const [trafficLights, setTrafficLights] = useState(0)
-  const changeTrafficLights = () => {
-    // setTrafficLights(trafficLights === 2 ? 0 : trafficLights + 1)
-    setTrafficLights((prev) => {return prev === 2 ? 0 : prev +1})
-  }
+  const [showScrollbar, setShowScrollbar] = useState(false);
+  const [scrollBarPosition, setScrollBarPosition] = useState(0)
+  useEffect(() => {
+    document.addEventListener('scroll', () => setScrollBarPosition(document.documentElement.scrollTop))
+    return () => {
+      document.removeEventListener('scroll', () => setScrollBarPosition(document.documentElement.scrollTop))
+    }
+  })
   return (
-    <div className='traffic-lights'>
-      <button onClick={changeTrafficLights}>Next</button>
-      <div>
-        {
-          traffcLightsClassName.map((light, index) => (
-            <div key={index} className={`light ${index === trafficLights && light}`}></div>
-        ))}
-      </div>
+    <div className='hw'>
+      <button  onClick={() => setShowScrollbar(!showScrollbar)}>{showScrollbar ? "Hide scrollbar" : "Show scrollbar"}</button>
+      <a style={{opacity: scrollBarPosition > 100 ? 1 : 0}} href="#">▲</a>
+      {showScrollbar && <div style={{height: 4000}}></div>}
     </div>
   )
 }

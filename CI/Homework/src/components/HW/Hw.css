@@ -2,32 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.traffic-lights {
+.hw {
     text-align: center;
 }
 
-.light {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: solid 1px #000;
-    display: inline-block;
+button {
+    padding: 20px 30px;
+    font-size: 20px;
+    border: none;
+    background-color: #34495e;
+    color: aliceblue;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 10px;
 }
 
-.red {
-    background-color: red;
+button:hover {
+    background-color: #5c7d9e;
+    transform: scale(1.05);
 }
 
-.yellow {
-    background-color: yellow;
+button:active {
+    background-color: #7fa8d1;
 }
 
-.green {
-    background-color: green;
+a {
+    color: aliceblue;
+    background-color: #2980b9;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.4s;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
 
-.off {
-    background-color: #fff;
+a:hover {
+    background-color: #6aa8d1;
+}
+
+a:active {
+    background-color: #a5c7dd;
 }
