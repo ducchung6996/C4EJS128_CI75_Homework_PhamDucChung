@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Hw from './components/HW/Hw';
+import Day8 from './components/Day8/Day8';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Hw/>
+    <Day8/>
   </React.StrictMode>
 );
 
