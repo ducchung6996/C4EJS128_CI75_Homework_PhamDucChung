@@ -8,7 +8,15 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< Updated upstream:CI/Homework/package.json
     "react-icons": "^4.4.0",
+=======
+<<<<<<< Updated upstream:CI/B2/package.json
+=======
+    "react-icons": "^4.4.0",
+    "react-router-dom": "6",
+>>>>>>> Stashed changes:CI/Homework/package.json
+>>>>>>> Stashed changes:CI/B2/package.json
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.5",
     "uuid": "^8.3.2",
