@@ -9,6 +9,8 @@ const B2 = () => {
   const handleInput = (e) => {
     const arr = eval("[" + e.target.value + "]");
     setInput([...arr]);
+    setResult1();
+    setResult2();
   };
   const handleSubmit = (e) => {
     e.preventDefault();
