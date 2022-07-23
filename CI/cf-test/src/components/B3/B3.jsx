@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
 import "./B3.css";
 
@@ -7,10 +6,7 @@ const B3 = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResut] = useState("");
-  const [data, setData] = useState("");
-  useEffect(() => {
-    setData(input)
-  },[input]);
+  const [linkType, setLinkType] = useState(1);
   const handleInput = (e) => {
     setInput(e.target.value);
     setResut('')
@@ -19,11 +15,11 @@ const B3 = () => {
     e.preventDefault();
     setLoading(true);
     const products = await (
-      await fetch(`https://api.shrtco.de/v2/shorten?url=${data}`)
+      await fetch(`https://api.shrtco.de/v2/shorten?url=${input}`)
     ).json();
     setResut(products);
     setLoading(false);
-    console.log(result);
+    console.log(products);
   };
 
   return (
@@ -36,7 +32,12 @@ const B3 = () => {
           placeholder="Enter a link..."
         />
         <button type="submit">{loading ? "Loading ..." : "Get link"}</button>
-        {result !== '' && <p>Your link is: {result.ok ? result.result.short_link : !result.ok ? "Can't get link" : ""}</p>}
+        <div className="link-type-container">
+          <button type="button" onClick={() => setLinkType(1)} className={`link-type ${linkType === 1 ? "active" : ""}`}>shrtco.de</button>
+          <button type="button" onClick={() => setLinkType(2)} className={`link-type ${linkType === 2 ? "active" : ""}`}>9qr.de</button>
+          <button type="button" onClick={() => setLinkType(3)} className={`link-type ${linkType === 3 ? "active" : ""}`}>shiny.link</button>
+        </div>
+        {result !== '' && <p>Your link is: {result.ok && linkType === 1 ? result.result.short_link : linkType === 2 ? result.result.short_link2 : linkType === 3 ? result.result.short_link3 : !result.ok ? "Can't get link" : ""}</p>}
       </form>
     </div>
   );

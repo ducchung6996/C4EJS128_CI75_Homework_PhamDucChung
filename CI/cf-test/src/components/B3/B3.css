@@ -3,3 +3,28 @@
     align-items: center;
     justify-content: center;
 }
+
+.link-type-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.link-type {
+    background-color: #fff;
+    border: 1px solid #000;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.link-type:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.link-type.active {
+    color: #fff;
+    background-color: #000;
+}
