@@ -14,7 +14,9 @@ const B1 = () => {
     let arr = [];
     for (let a of input) {
       for (let b of input) {
-        arr = [...arr, a * b];
+        if (a !== b) {
+          arr = [...arr, a * b];
+        }
       }
     }
     setResult(Math.max(...arr));
@@ -24,7 +26,7 @@ const B1 = () => {
     <div id="b1">
       <h1>Test 1</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleInput} type="text" />
+        <input onChange={handleInput} type="text" placeholder="Enter numbers..."/>
         <button type="submit">OK</button>
       </form>
       <p>Result:{result !== -Infinity ? result : ''}</p>

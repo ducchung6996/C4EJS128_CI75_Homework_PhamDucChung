@@ -28,7 +28,7 @@ const B2 = () => {
     <div id="b2">
       <h1>Test 2</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleInput} type="text" />
+        <input onChange={handleInput} type="text" placeholder="Enter numbers..."/>
         <button type="submit">OK</button>
       </form>
       <p>Cân nặng team 1: {result1 !== -Infinity ? result1 : ''}</p>
