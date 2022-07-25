@@ -1,0 +1,133 @@
+#slider {
+    height: fit-content;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.slider-item {
+    padding: 30px 10px;
+}
+
+.slider-item-container {
+    background-color: #fff;
+    border: 1px solid #e18936;
+    transition: 0.4s;
+}
+
+.slider-item-container:hover {
+    transform: scale(1.04);
+}
+
+.slider-image-container {
+    width: 360px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-image {
+    object-fit: cover;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.slider-image-container:hover .read-more {
+    transform: scaleY(1);
+}
+
+.slider-title {
+    font-size: 40px;
+    color: #e18936;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.read-more {
+    background-color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 8px 16px;
+    white-space: nowrap;
+    transition: 0.4s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.slider-item-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slider-item-title {
+    font-size: 20px;
+    color: #e18936;
+    font-weight: bold;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+}
+
+.add-todo {
+    background-color: #fff;
+    padding: 8px 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    white-space: nowrap;
+    border: solid 1px #e18936;
+    color: #e18936;
+    width: 100%;
+    font-weight: bold;
+}
+
+.add-todo:hover {
+    background-color: #e18936;
+    color: #fff;
+}
+
+.remove-todo {
+    background-color: #16a085;
+    padding: 8px 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    white-space: nowrap;
+    border: solid 1px #16a085;
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+}
+
+.remove-todo:hover {
+    background-color: #126857;
+}
+
+.slider-item-location {
+    color: #16a085;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    width: fit-content;
+}
+
+.slider-item-location:hover {
+    text-decoration: underline;
+}

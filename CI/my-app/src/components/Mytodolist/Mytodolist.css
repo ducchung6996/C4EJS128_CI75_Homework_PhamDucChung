@@ -1,0 +1,164 @@
+#mytodolist {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+    min-height: 100vh;
+}
+
+@keyframes todolist {
+    from {opacity: 0; transform: translateX(200px);};
+    to {opacity: 1; transform: translateX(0);};
+}
+
+.todolist-container {
+    width: 50%;
+    min-width: 300px;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #e18936;
+    animation: todolist 0.5s ease-in-out;
+}
+
+.save-undo {
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    padding: 10px;
+    background-color: #fff;
+    border: solid 2px #34495e;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    transform: translate(-50%, 0);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.save-undo.active {
+    opacity: 1;
+}
+
+.save-todolist {
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #16a085;
+    border: 2px solid #16a085;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+.save-todolist:hover {
+    background-color: #16a085;
+    color: #fff;
+}
+
+.undo-todolist {
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #2980b9;
+    border: 2px solid #2980b9;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+.undo-todolist:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.todo-title {
+    color: #e18936;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.todo {
+    width: 90%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #e18936;
+    padding: 0 20px;
+    transition: 0.4s;
+    position: relative;
+}
+
+.todo:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 3px rgba(71, 71, 71, 0.75);
+}
+
+.todo-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.todo-status {
+    width: 36px;
+    height: 36px;
+}
+
+.todo-image-container {
+    width: 160px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.todo-image {
+    object-fit: cover;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+
+.todo-food-title {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.todo-food-title.done {
+    text-decoration: line-through;
+}
+
+.todo-read-more {
+    color: #fff;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+
+.todo-read-more:hover {
+    transform: translateX(6px);
+}
+
+.todo.done {
+    opacity: 0.6;
+}
+
+.delete-todo {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
